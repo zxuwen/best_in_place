@@ -4,12 +4,15 @@
 $(document).ready(function() {
   /* Activating Best In Place */
   jQuery(".best_in_place").best_in_place();
+  jQuery(".date").live("select", function() {
+    $(this).datepicker().focus();
+  });
 });
 
 function inspect(obj, maxLevels, level)
 {
   var str = '', type, msg;
-1
+
     // Start Input Validations
     // Don't touch, we start iterating at level zero
     if(level == null)  level = 0;
